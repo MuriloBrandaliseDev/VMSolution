@@ -1,0 +1,496 @@
+/* Resetando margens */
+body {
+    background-color: #161515;
+    /* Cor de fundo */
+    background-image: url('Imagens/kawaii\ \(4\).png'), url('Imagens/kawaii\ \(3\).png'), url('Imagens/kawaii\ \(5\).png');
+    background-position: 10% 35%, 80% 37%, 20% 87%;
+    /* Posição dos ícones no fundo */
+    background-repeat: no-repeat;
+    /* Impede que os ícones se repitam */
+    background-size: 150px, 150px, 150px;
+    /* Tamanho dos ícones */
+}
+
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Deixa espaço entre logo e o conteúdo */
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+    padding: 0% 25%;
+    background-color: #1a1a1a;
+    /* Cor de fundo do cabeçalho */
+    box-sizing: border-box;
+    /* Para incluir padding no cálculo de largura */
+}
+
+.logo img {
+    max-width: 200px;
+    /* Tamanho ajustável da logo */
+    height: auto;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 250px;
+    margin-top: 40px;
+    flex-grow: 1;
+    /* Permite que a área central se expanda */
+}
+
+.botões ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    /* Espaçamento entre os itens */
+}
+
+.botões ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.botões ul li+li::before {
+    content: '|';
+    color: orange;
+    margin: 0 10px;
+    font-size: 25px;
+    line-height: 1;
+}
+
+.botões ul li a:hover {
+    color: rgb(250, 196, 0);
+}
+
+/* Linha separadora abaixo do menu */
+.linha {
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* Redes sociais */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+}
+
+
+/* ---------------------------FIM */
+
+
+
+
+
+
+/* IMAGEM */
+.imagem {
+
+    overflow: hidden;
+    width: 100%;
+    height: 700px;
+    background: url('Imagens/Impressora.webp');
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 90%);
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: background-position 0.5s ease;
+}
+
+.imagem:hover {
+    background-position: center 50%;
+    /* Movimenta o fundo ao passar o mouse */
+}
+
+.titulo-do-meio h1 {
+    color: white;
+    font-size: 5em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.mais {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mais a {
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+
+}
+
+/* Estilizando o botão */
+.botao-personalizado {
+
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+
+.botao-personalizado:hover {
+    background-color: transparent;
+    color: orange;
+    border-color: orange;
+    transform: scale(1.05);
+
+
+    .botao-personalizado:active {
+        transform: scale(0.98);
+    }
+
+
+}
+
+/* ----------------------------FIM */
+
+
+
+
+/* Estilo para os blocos */
+.serviços {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.linhaVM {
+    width: 5%;
+    height: 6px;
+    background-color: white;
+}
+
+.blocos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.bloco {
+    margin-bottom: 15%;
+    width: 300px;
+    height: 300px;
+    /* Altura dos quadrados */
+    padding: 40px;
+    background-color: #1a1a1a;
+    /* Cor de fundo do bloco */
+    text-align: center;
+    position: relative;
+    /* Para controlar o pseudo-elemento */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.8s ease;
+    /* Suave transição de movimento */
+}
+
+/* Criando a borda com um pseudo-elemento */
+
+.bloco::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    left: 10px;
+    /* Ajusta a borda mais para dentro */
+    right: 10px;
+    /* Ajusta a borda mais para dentro */
+    bottom: 10px;
+    /* Ajusta a borda mais para dentro */
+    border: 5px solid #02b1fd;
+    transition: top 0.8s ease;
+}
+
+
+.bloco:hover::after {
+    top: 0;
+}
+
+.bloco:hover {
+    transform: translateY(-20px);
+}
+
+
+
+
+/* Estilo para a imagem dentro dos blocos */
+.bloco img {
+    width: 200px;
+    /* Imagem pequena */
+    height: auto;
+    object-fit: contain;
+    z-index: 101;
+}
+
+/* Descrição do serviço */
+.bloco p {
+    font-size: 25px;
+    color: #ffffff;
+    margin-top: -30px;
+    z-index: 102;
+}
+
+/* Botão "Ver mais" */
+.ver-mais {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #02b1fd;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.ver-mais:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #02b1fd;
+    transform: scale(1.05);
+}
+
+.ver-mais:active {
+    transform: scale(0.98);
+}
+
+/* ----------------------------FIM */
+
+
+
+
+
+
+
+/* Estilização básica da seção */
+.sobre-vmsolution {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    margin-bottom: 20%;
+    background-color: #161515;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+/* Borda com pseudo-elemento */
+.sobre-vmsolution::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 97%;
+    height: 93%;
+    border: 10px solid transparent;
+    transition: all 0.7s ease;
+}
+
+
+.sobre-vmsolution:hover::after {
+    border-color: pink
+}
+
+.aqui {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.aqui h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.linhalimbo {
+    margin-top: -30px;
+    background-color: pink;
+    width: 10%;
+    height: 5px;
+}
+
+.linhasb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5%;
+    height: 5px;
+    background-color: pink;
+}
+
+.texto {
+    width: 50%;
+    padding-right: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+.texto h2 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto h3 {
+    font-size: 2em;
+    color: pink;
+    margin-bottom: 15px;
+}
+
+.imagem-sobre {
+    width: 50%;
+    background-size: cover;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+/* ----------------FIM */
+
+
+
+
+
+/* Estilo do container geral */
+.impressoras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espaçamento entre os quadrados */
+    padding: 20px;
+    background-color: #161515;
+}
+
+/* Cada quadrado */
+.quadrado {
+    width: 250px; /* Defina o tamanho do quadrado */
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o quadrado */
+.quadrado:hover {
+    transform: translateY(-10px); /* Move o quadrado para cima ao passar o mouse */
+}
+
+/* Estilo da imagem */
+.imagem-impressora {
+    width: 100%;
+    height: 150px; /* Defina a altura da área da imagem */
+}
+
+.imagem-impressora img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço da área da imagem */
+}
+
+/* Estilo da descrição */
+.descricao {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.descricao h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.descricao p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Estilo do botão "Saiba Mais" */
+.saiba-mais {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #02b1fd;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    background-color: #0094d6;
+}
